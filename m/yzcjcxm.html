@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>全国硕士研究生招生考试部分考生初试成绩查询系统</title>
+    <meta content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" /> -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://t2.chei.com.cn/yz/favicon.ico">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			overflow-x: hidden;
+		}
+		a, a:visited, a:hover, a:link{
+			text-decoration: none;
+			color: #999;
+		}
+		body{
+			font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,SimSun,"sans-serif";
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			min-height: 100vh;
+			background: #f5f5f5;
+		}
+		#exclamation{
+			display: flex;
+			position: absolute;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 5rem;
+			background: red;
+			color: #fff;
+			z-index: 10000;
+			padding: 0.5rem;
+			overflow: hidden;
+		}
+		#header{
+			position: relative;
+			z-index: 1;
+			height: 3.2rem;
+			display: flex;
+			align-items: center;
+			background: #fff;
+		}
+		#logo{
+			display: block;
+			width: 7.175rem;
+			padding: 0.5rem;
+		}
+		svg{
+			width: 1.5rem; 
+			margin-right: 0.6675rem;
+		}
+		#userFrame{
+			position: absolute;
+			right: 0;
+			padding: 0 1.0675rem
+		}
+		#pageTitle{
+			text-align: center;
+			font-size: 1.1325rem;
+			line-height: 1.8rem;
+			padding: 0.6675rem;
+			color: #fff;
+			background-color: #2893e9;
+		}
+		#collegeMessage{
+			background: #fffaeb;
+			padding: 0.6rem 0.8rem;
+			line-height: 1.2rem;
+			color: #666;
+			font-size: 0.9325rem;
+		}
+		#studentInfo{
+			background: #fff;
+			width: 100%;
+			font-size: 1.2rem;
+		}
+		.infoRow{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			border-bottom: 1px solid #e5e5e5;
+			align-items: center;
+		}
+		.rowTitle{
+			width: 30%;
+			padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+		}
+		.rowContent{
+			width: 70%;
+			color:#999;
+		}
+		#collegeInfo{
+			font-size: 0.9325rem;
+			color: #999;
+			line-height:1.4rem;
+			padding: 0 1rem 0 1rem;
+		}
+		#btnFrame{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		#back{
+			display: flex;
+			width: 80%;
+			height: 3.1675rem;
+			align-items: center;
+			justify-content: center;
+			line-height: 3.0675rem;
+			font-size: 1.2rem;
+			background-color: #2893e9;
+			border-radius: 0.25rem;
+			color: #fff;
+			line-height: 1.227rem;
+		}
+		.main{
+			flex:1;
+		}
+		#footer{
+			background: #282828;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#footerBox{
+			color: #999;
+			font-size: 0.8rem;
+			padding: 1.6rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="exclamation">
+		<div style="width: 80%;font-weight: bold;">注意：本页面仅供娱乐，所生成的成绩不具有任何检验效力！不应该使用此页面进行任何情况下的研究生初试成绩验证用途。</div>
+		<div style="width: 20%;display: flex;justify-content: center;align-items: center;">
+			<svg id="cancel" t="1676786478787" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3615" width="200" height="200"><path d="M632.117978 513.833356l361.805812 361.735298a85.462608 85.462608 0 1 1-121.001515 120.789974L511.116463 634.552816 146.913186 998.756094a86.026718 86.026718 0 0 1-121.706652-121.706652L389.480325 512.775651 27.674513 150.969839A85.392095 85.392095 0 0 1 148.393973 30.250379L510.199785 392.056191l366.671258-366.671258a86.026718 86.026718 0 0 1 121.706652 121.706652z" p-id="3616" fill="#ffffff"></path></svg>
+		</div>
+	</div>
+	<div id="header">
+		<div id="logoFrame">
+			<img id="logo" src="https://t1.chei.com.cn/yz/wap/assets/images/index/logo.png" alt=""/>
+		</div>
+		<div id="userFrame">
+			<svg t="1676731038149" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3607" width="200" height="200">
+				<path d="M508.672 128.64c123.904 0 224.768 100.864 224.768 224.768s-100.864 224.768-224.768 224.768-224.768-100.864-224.768-224.768c0-124.032 100.864-224.768 224.768-224.768m0-79.36c-167.936 0-304.128 136.192-304.128 304.128s136.192 304.128 304.128 304.128S812.8 521.344 812.8 353.408 676.608 49.28 508.672 49.28" fill="#040000" p-id="3608"></path>
+				<path d="M92.288 974.72c-2.304 0-4.608-0.256-6.912-0.64-21.504-3.84-35.968-24.32-32.128-45.952 40.064-227.328 264.576-350.08 455.552-350.08 21.888 0 39.68 17.792 39.68 39.68s-17.792 39.68-39.68 39.68c-126.464 0-340.864 77.184-377.344 284.544-3.584 19.2-20.224 32.768-39.168 32.768" fill="#040000" p-id="3609"></path>
+				<path d="M931.712 974.72c-18.944 0-35.584-13.568-39.04-32.768-36.608-207.232-250.88-284.544-377.344-284.544-21.888 0-39.68-17.792-39.68-39.68s17.792-39.68 39.68-39.68c190.848 0 415.36 122.752 455.552 350.08 3.84 21.632-10.624 42.112-32.128 45.952-2.432 0.384-4.736 0.64-7.04 0.64" fill="#040000" p-id="3610"></path>
+			</svg>
+			<svg t="1676731115821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4614" width="200" height="200">
+				<path d="M196.266667 277.333333h635.733333c17.066667 0 34.133333-12.8 34.133333-34.133333s-17.066667-29.866667-38.4-29.866667H196.266667c-21.333333 0-34.133333 17.066667-34.133334 34.133334s12.8 29.866667 34.133334 29.866666zM827.733333 477.866667H196.266667c-17.066667 0-34.133333 12.8-34.133334 34.133333s12.8 34.133333 34.133334 34.133333h635.733333c17.066667 0 34.133333-12.8 34.133333-34.133333s-17.066667-34.133333-38.4-34.133333zM827.733333 746.666667H196.266667c-17.066667 0-34.133333 12.8-34.133334 34.133333s12.8 29.866667 34.133334 29.866667h635.733333c17.066667 0 34.133333-12.8 34.133333-34.133334s-17.066667-29.866667-38.4-29.866666z" fill="#111111" p-id="4615"></path>
+			</svg>
+		</div>
+		
+	</div>
+	<div id="pageTitle">2023年部分考生初试成绩查询</div>
+	<div id="collegeMessage">招生单位说明：请考生及时关注并查阅我校研究生院网站和研招办微信公众号的后续通知。</div>
+	<br />
+	<div id="studentInfo">
+		<div class="infoRow"><div class="rowTitle">姓名</div><div class="rowContent" id="name">null</div></div>
+		<div class="infoRow"><div class="rowTitle">报名号</div><div class="rowContent" id="enrollNum">null</div></div>
+		<div class="infoRow"><div class="rowTitle">准考证号</div><div class="rowContent" id="examNum">null</div></div>
+		<div class="infoRow"><div class="rowTitle">总分</div><div class="rowContent" id="score">null</div></div>
+		<div class="infoRow"><div class="rowTitle">第一门</div><div class="rowContent" id="first">null</div></div>
+		<div class="infoRow"><div class="rowTitle">第二门</div><div class="rowContent" id="second">null</div></div>
+		<div class="infoRow"><div class="rowTitle">第三门</div><div class="rowContent" id="third">null</div></div>
+		<div class="infoRow" id="noMathRow"><div class="rowTitle">第四门</div><div class="rowContent" id="forth">null</div></div>
+		<div class="infoRow"><div class="rowTitle">备注</div><div class="rowContent">无</div></div>
+	</div>
+	<br />
+	<p id="collegeInfo">
+		本系统所有数据均为招生单位提供，招生单位对查询结果负责解释。<br />
+		若查询的成绩为负值，表示有缺考、违纪等情况。若仍对查询结果有疑问，请咨询相应的招生单位。
+	</p>
+	<br />
+	<div id="btnFrame">
+		<a id="back" href="https://yz.chsi.com.cn/apply/cjcx/">返回</a>
+	</div>
+	<br />
+	<div class="main" id="main"></div>
+	<div id="footer">
+		<div id="footerBox">
+			主办单位：<a href="https://chesicc.chsi.com.cn/">教育部学生服务与素质发展中心</a>
+			<div style="margin-left: 4.5em;">（原全国高等学校学生信息咨询与就业指导中心）</div>
+			Copyright © 2003-<span>2023</span> <a href="https://www.chsi.com.cn/">学信网</a> All Rights Reserved
+		</div>
+	</div>
+</body>
+<script>
+	function getParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null)
+			return decodeURI(r[2]);
+		return null;
+	}
+	
+	//m/yzcjcxm.html?na=王小明&en=214123456&ex=123456789098765&fi=100&sn=201&se=100&tn=301&th=150&fon=(802)机械设计基础&fo=150
+	var name = getParam("na");
+	var enrollNum = getParam("en");
+	var examNum = getParam("ex");
+	var first = getParam("fi");
+	var secondNum = getParam("sn");
+	var second = getParam("se");
+	var thirdNum = getParam("tn");
+	var third = getParam("th");
+	var forthNum = getParam("fon");
+	var forth = getParam("fo");
+	
+	var english = (secondNum == 201)&&("(201)英语（一）")||("(204)英语（二）")
+	var math = (thirdNum == 301)&&("(301)数学（一）")||((thirdNum == 302)&&("(302)数学（二）")||("(303)数学（三）"));
+	var politicsText = "(101)思想政治理论: " + first;
+	var englishText = english + ": " + second;
+	var mathText = math + ": " + third;
+	var proffessionText = forthNum + ": " + forth;
+	
+	var noMath = (Number(third)>0)&&(third)||("0");
+	
+	document.getElementById("name").innerHTML = name;
+	document.getElementById("enrollNum").innerHTML = enrollNum;
+	document.getElementById("examNum").innerHTML = examNum;
+	document.getElementById("score").innerHTML = Number(first)+Number(second)+Number(noMath)+Number(forth);
+	document.getElementById("first").innerHTML = politicsText;
+	document.getElementById("second").innerHTML = englishText;
+	if(Number(third)<0){
+		document.getElementById("third").innerHTML = proffessionText;
+		document.getElementById("noMathRow").style.display = "none";
+	}else{
+		document.getElementById("third").innerHTML = mathText;
+		document.getElementById("forth").innerHTML = proffessionText;
+	}
+	
+	document.getElementById("cancel").addEventListener("click",function(){
+		document.getElementById("exclamation").style.display = "none";
+	});
+</script>
+</html>

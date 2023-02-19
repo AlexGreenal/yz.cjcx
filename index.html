@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>全国硕士研究生招生考试部分考生初试成绩查询系统</title>
+    <meta content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://t2.chei.com.cn/yz/favicon.ico">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			overflow-x: hidden;
+		}
+		a, a:visited, a:hover, a:link{
+			text-decoration: none;
+			color: #999;
+		}
+		body{
+			font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,SimSun,"sans-serif";
+			display: block;
+			flex-direction: column;
+			width: 100%;
+			height: 100vh;
+			background: #f5f5f5;
+		}
+		#header{
+			position: relative;
+			z-index: 1;
+			height: 3.2rem;
+			display: flex;
+			align-items: center;
+			background: #fff;
+		}
+		#logo{
+			display: block;
+			width: 7.175rem;
+			padding: 0.5rem;
+		}
+		svg{
+			width: 1.5rem; 
+			margin-right: 0.6675rem;
+		}
+		#userFrame{
+			position: absolute;
+			right: 0;
+			padding: 0 1.0675rem
+		}
+		#pageTitle{
+			text-align: center;
+			font-size: 1.1325rem;
+			line-height: 1.8rem;
+			padding: 0.6675rem;
+			color: #fff;
+			background-color: #2893e9;
+		}
+		#collegeMessage{
+			background: #fffaeb;
+			padding: 0.6rem 0.8rem;
+			line-height: 1.2rem;
+			color: #666;
+			font-size: 0.9325rem;
+		}
+		.studentInfo{
+			background: #fff;
+			width: 100%;
+			font-size: 1.2rem;
+		}
+		.infoRow{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			border-bottom: 1px solid #e5e5e5;
+			align-items: center;
+		}
+		.rowTitle{
+			width: 30%;
+			padding: 0.6rem 1.2rem 0.6rem 0.6rem;
+		}
+		.rowContent{
+			width: 70%;
+			color:#999;
+		}
+		input{
+			color: #999;
+			font-size: 1.2rem;
+			outline:none;
+			border: 0;
+			background: transparent;
+		}
+		#change input:not(#forthNum){
+			width: calc(80% - 3rem);
+		}
+		select{
+			color: #999;
+			font-size: 1.2rem;
+			outline:none;
+			border: 0;
+			background: #fff;
+			border-radius: 0.25rem;
+		}
+		#more{
+			display: flex;
+			width: 100%;
+			height: 1rem;
+			padding: 0.5rem 0 0 1.4rem;
+			flex-direction: row;
+			align-items: center;
+			color: #2893e9;
+		}
+		#collegeInfo{
+			font-size: 0.9325rem;
+			color: #999;
+			line-height:1.4rem;
+			padding: 0 1rem 0 1rem;
+		}
+		#btnFrame{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		#back{
+			display: flex;
+			width: 80%;
+			height: 3.1675rem;
+			align-items: center;
+			justify-content: center;
+			line-height: 3.0675rem;
+			font-size: 1.2rem;
+			background-color: #2893e9;
+			border-radius: 0.25rem;
+			color: #fff;
+			line-height: 1.227rem;
+		}
+		#footer{
+			width: 100%;
+			height: 3rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			font-size: 0.9rem;
+			line-height: 3rem;
+			color: #999;
+		}
+		#footer svg{
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<div id="logoFrame">
+			<img id="logo" src="https://t1.chei.com.cn/yz/wap/assets/images/index/logo.png" alt=""/>
+		</div>
+		<div id="userFrame">
+			<svg t="1676731038149" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3607" width="200" height="200">
+				<path d="M508.672 128.64c123.904 0 224.768 100.864 224.768 224.768s-100.864 224.768-224.768 224.768-224.768-100.864-224.768-224.768c0-124.032 100.864-224.768 224.768-224.768m0-79.36c-167.936 0-304.128 136.192-304.128 304.128s136.192 304.128 304.128 304.128S812.8 521.344 812.8 353.408 676.608 49.28 508.672 49.28" fill="#040000" p-id="3608"></path>
+				<path d="M92.288 974.72c-2.304 0-4.608-0.256-6.912-0.64-21.504-3.84-35.968-24.32-32.128-45.952 40.064-227.328 264.576-350.08 455.552-350.08 21.888 0 39.68 17.792 39.68 39.68s-17.792 39.68-39.68 39.68c-126.464 0-340.864 77.184-377.344 284.544-3.584 19.2-20.224 32.768-39.168 32.768" fill="#040000" p-id="3609"></path>
+				<path d="M931.712 974.72c-18.944 0-35.584-13.568-39.04-32.768-36.608-207.232-250.88-284.544-377.344-284.544-21.888 0-39.68-17.792-39.68-39.68s17.792-39.68 39.68-39.68c190.848 0 415.36 122.752 455.552 350.08 3.84 21.632-10.624 42.112-32.128 45.952-2.432 0.384-4.736 0.64-7.04 0.64" fill="#040000" p-id="3610"></path>
+			</svg>
+			<svg t="1676731115821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4614" width="200" height="200">
+				<path d="M196.266667 277.333333h635.733333c17.066667 0 34.133333-12.8 34.133333-34.133333s-17.066667-29.866667-38.4-29.866667H196.266667c-21.333333 0-34.133333 17.066667-34.133334 34.133334s12.8 29.866667 34.133334 29.866666zM827.733333 477.866667H196.266667c-17.066667 0-34.133333 12.8-34.133334 34.133333s12.8 34.133333 34.133334 34.133333h635.733333c17.066667 0 34.133333-12.8 34.133333-34.133333s-17.066667-34.133333-38.4-34.133333zM827.733333 746.666667H196.266667c-17.066667 0-34.133333 12.8-34.133334 34.133333s12.8 29.866667 34.133334 29.866667h635.733333c17.066667 0 34.133333-12.8 34.133333-34.133334s-17.066667-29.866667-38.4-29.866666z" fill="#111111" p-id="4615"></path>
+			</svg>
+		</div>
+		
+	</div>
+	<div id="pageTitle">2023年部分考生初试成绩查询</div>
+	<div id="collegeMessage">姓名、证件号码、准考证号必填。</div>
+	<br />
+	<div class="studentInfo">
+		<div class="infoRow"><div class="rowTitle"><font style="color:red">*</font> 姓名</div><div class="rowContent"><input type="text" id="name" value="王小明" /></div></div>
+		<div class="infoRow"><div class="rowTitle"><font style="color:red">*</font> 报名号</div><div class="rowContent"><input type="text" id="enrollNum" value="214123456" /></div></div>
+		<div class="infoRow"><div class="rowTitle"><font style="color:red">*</font> 准考证号</div><div class="rowContent"><input type="text" id="examNum" value="123456789098765" /></div></div>
+		<div class="infoRow"><div class="rowTitle"><font style="color:white">*</font> 报考单位</div><div class="rowContent"><input type="text" value="(10558)中山大学" /></div></div>
+	</div>
+	<a id="more" href="javascript:showdiv();">
+		确认更多
+		<svg style="width: 0.9325rem;height: 0.9325rem;" t="1676777636379" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2750" width="200" height="200"><path d="M0 0h1024v1024H0z" fill="#2893e9" fill-opacity="0" p-id="2751"></path><path d="M722.773333 381.44a64 64 0 0 1 90.453334 90.453333l-252.970667 253.013334a68.266667 68.266667 0 0 1-96.512 0l-253.013333-253.013334a64 64 0 0 1 90.538666-90.453333L512 592.128l210.773333-210.773333z" fill="#2893e9" p-id="2752"></path></svg>
+	</a>
+	<br />
+	<div class="studentInfo" id="change" style="display: none;">
+		<div class="infoRow"><div class="rowTitle">第一门</div><div class="rowContent">(<select class="menu" id="firstNum"><option>101</option></select>)<input type="text" id="first" value="100" /></div></div>
+		<div class="infoRow"><div class="rowTitle">第二门</div><div class="rowContent">(<select class="menu" id="secondNum"><option>201</option><option>204</option></select>)<input type="text" id="second" value="100" /></div></div>
+		<div class="infoRow"><div class="rowTitle">第三门</div><div class="rowContent">(<select class="menu" id="thirdNum"><option>301</option><option>302</option><option>303</option></select>)<input type="text" id="third" value="150" /></div></div>
+		<div class="infoRow"><div class="rowTitle">第四门</div><div class="rowContent">[<input type="text" id="forthNum" value="(802)机械设计基础" />]<input type="text" id="forth" value="150" /></div></div>
+		<p style="font-size: 1rem;padding: 0.2rem 1.4rem;color: #999;">
+			说明：从一至四门依次为政治、英语、数学、专业课，选择科目代码并直接填入分数。专业课填入完整科目代码和名称。<br />
+			如果没有数学考试科目，请在第三门科目中填-1，第四门课照常填专业课名称和分数。<br />
+			<font style="color: red;">注意：本页面仅供娱乐，生成的成绩不具有任何检验效力！</font>
+		</p>
+	</div>
+	<p id="collegeInfo">
+		本系统所有数据均为招生单位提供，招生单位对查询结果负责解释。
+	</p>
+	<br />
+	<div id="btnFrame">
+		<a id="back" href="javascript:sendMessage();">提交</a>
+	</div>
+	<br />
+	<br />
+	<div id="footer">
+		<svg t="1676780502233" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3048" width="200" height="200"><path d="M67.26 512a444.74 449.08 0 1 0 889.48 0 444.74 449.08 0 1 0-889.48 0Z" fill="#F4F4F4" p-id="3049"></path><path d="M846.33 459.34h11.19V674.5h-11.19z" fill="" p-id="3050"></path><path d="M684.78 742.27l2.75 0 0 2.75-2.75 0 0-2.75Z" fill="#FE7643" p-id="3051"></path><path d="M830.51 718.74h41.59a11.48 11.48 0 0 0 9.9-17.22l-20.79-36a11.48 11.48 0 0 0-19.88 0l-20.79 36a11.48 11.48 0 0 0 9.97 17.22z" fill="" p-id="3052"></path><path d="M840.83 631.25l22.55 0 0 22.55-22.55 0 0-22.55Z" fill="#FFFFFF" p-id="3053"></path><path d="M509.61 639.71L152.2 459.58l357.41-180.61 365.07 180.61-365.07 180.13z" fill="" p-id="3054"></path><path d="M735.74 639.71s-73.33-1.63-236.84-1.63c-172.92 0-209.51-3.44-209.51-3.44s-3.56-111.18 8.9-131.21c39.74-23.24 137.07-44.09 215.15-44.09 76.85 0 174.85 25.81 214.86 48.44 8.79 18.29 7.44 131.93 7.44 131.93z" fill="" p-id="3055"></path><path d="M741.67 645.84l-6.06-0.13c-0.73 0-75.16-1.63-236.7-1.63-171.23 0-208.57-3.33-210.08-3.47l-5.27-0.5-0.17-5.29c-0.37-11.57-3.24-113.61 9.8-134.57L294 499l1.28-0.75c41.62-24.34 141.53-44.91 218.18-44.91 77.08 0 176.65 25.94 217.81 49.22l1.64 0.93 0.82 1.7c9.14 19 8.18 122.82 8 134.6zM295.24 629c15.15 0.87 66.78 3.06 203.67 3.06 135.83 0 210.15 1.14 230.89 1.52 0.31-42.16-1.1-106.19-6.27-121.59-40.91-22.28-136-46.66-210.09-46.66s-169.78 19.37-210.71 42.46c-7.43 15.4-8.57 79.65-7.49 121.21z" fill="#FFFFFF" p-id="3056"></path></svg>
+		<p>中国研究生招生信息网</p>
+	</div>
+</body>
+<script type="text/javascript">
+	function showdiv() {
+		document.getElementById("change").style.display = "block";
+		document.getElementById("footer").style.display = "none";
+		document.getElementById("more").href = "javascript:hidediv()";
+	}
+
+	function hidediv() {
+		document.getElementById("change").style.display = "none";
+		document.getElementById("footer").style.display = "flex";
+		document.getElementById("more").href = "javascript:showdiv()";
+	}
+	
+	function sendMessage(){
+		var name = document.getElementById("name").value;
+		var enrollNum = document.getElementById("enrollNum").value;
+		var examNum = document.getElementById("examNum").value;
+		
+		var first = document.getElementById("first").value;
+		var secondNum = document.getElementById("secondNum").value;
+		var second = document.getElementById("second").value;
+		var thirdNum = document.getElementById("thirdNum").value;
+		var third = document.getElementById("third").value;
+		var forthNum = document.getElementById("forthNum").value;
+		var forth = document.getElementById("forth").value;
+		
+		// console.log(name,enrollNum,examNum,first,secondNum,second,thirdNum,third,forthNum,forth);
+		var linkContent = "m/yzcjcxm.html?na="+name+"&en="+enrollNum+"&ex="+examNum+"&fi="+first+"&sn="+secondNum+"&se="+second+"&tn="+thirdNum+"&th="+third+"&fon="+forthNum+"&fo="+forth;
+		// console.log(linkContent);
+		url=encodeURI(linkContent);
+		window.location.href=url;
+	}
+</script>
+
+</html>
